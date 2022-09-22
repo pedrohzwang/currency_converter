@@ -1,6 +1,5 @@
 import 'package:currency_converter/pages/home.dart';
 import 'package:currency_converter/theme/theme.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -8,7 +7,7 @@ void main() {
     MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: theme,
-      home: const Home(),
+      home: Home(),
     ),
   );
 }
