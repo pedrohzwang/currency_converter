@@ -5,4 +5,18 @@ final theme = ThemeData(
   appBarTheme: const AppBarTheme(
     backgroundColor: Colors.purple,
   ),
+  inputDecorationTheme: const InputDecorationTheme(
+    enabledBorder: OutlineInputBorder(
+      borderSide: BorderSide(color: Colors.purple),
+    ),
+    focusedBorder: OutlineInputBorder(
+      borderSide: BorderSide(
+        color: Colors.white,
+      ),
+    ),
+    labelStyle: TextStyle(
+      
+      color: Colors.white,
+    ),
+  ),
 );

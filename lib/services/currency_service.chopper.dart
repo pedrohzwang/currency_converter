@@ -35,6 +35,7 @@ class _$CurrencyService extends CurrencyService {
       client.baseUrl,
       parameters: $params,
     );
+
     return client.send<dynamic, dynamic>($request);
   }
 }
