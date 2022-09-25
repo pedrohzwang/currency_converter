@@ -14,46 +14,8 @@ class Home extends StatelessWidget {
       ),
       body: SingleChildScrollView(
         child: Column(
-          children: const [
-            Padding(
-              padding: EdgeInsets.all(30),
-              child: TextField(
-                autofocus: true,
-                decoration: InputDecoration(labelText: 'R\$'),
-              ),
-            ),
-            // Padding(
-            //   padding: EdgeInsets.fromLTRB(30, 0, 30, 30),
-            //   child: TextField(
-            //     autofocus: true,
-            //     decoration: InputDecoration(labelText: 'R\$'),
-            //   ),
-            // ),
-            // Padding(
-            //   padding: EdgeInsets.fromLTRB(30, 0, 30, 30),
-            //   child: TextField(
-            //     autofocus: true,
-            //     decoration: InputDecoration(labelText: 'R\$'),
-            //   ),
-            // ),
-            // Padding(
-            //   padding: EdgeInsets.fromLTRB(30, 0, 30, 30),
-            //   child: TextField(
-            //     autofocus: true,
-            //     decoration: InputDecoration(labelText: 'R\$'),
-            //   ),
-            // ),
-            // Padding(
-            //   padding: EdgeInsets.fromLTRB(30, 0, 30, 30),
-            //   child: TextField(
-            //     autofocus: true,
-            //     decoration: InputDecoration(labelText: 'R\$'),
-            //   ),
-            // ),
-            SizedBox(
-              height: 500,
-              child: CurrencyForm(),
-            )
+          children: [
+            CurrencyForm(),
           ],
         ),
       ),

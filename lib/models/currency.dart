@@ -9,7 +9,7 @@ class Currency {
 
   String name;
   late String? symbol;
-  double? buy;
+  double buy;
   double? sell;
   double? variation;
 
