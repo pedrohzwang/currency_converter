@@ -1,19 +1,22 @@
+import 'package:chopper/chopper.dart';
 
+part 'currency_service.chopper.dart';
 
-import 'dart:convert';
+@ChopperApi(baseUrl: '/finance')
+abstract class CurrencyService extends ChopperService {
+  @Get()
+  Future<Response> getCurrencies(
+      {@Query() String apiKey, @Query() String format});
 
-import 'package:currency_converter/models/currency.dart';
-import 'package:http/http.dart';
+  static CurrencyService create() {
+    final client = ChopperClient(
+      baseUrl: 'https://api.hgbrasil.com',
+      services: [
+        _$CurrencyService(),
+      ],
+      converter: const JsonConverter(),
+    );
 
-
-class CurrencyService {
-  final Uri url = Uri.parse('https://api.hgbrasil.com/finance?format=json&key=9c5d7064');
-
-  Future<List<Currency>> getValues() async {
-    Response res = await get(url);
-    List data = json.decode(res.body)['results']['currencies'];
-    List<Currency> retorno = data.map((item) => Currency.fromJson(item)).toList();
-    print(retorno);
-    return retorno;
+    return _$CurrencyService(client);
   }
 }

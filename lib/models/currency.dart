@@ -4,12 +4,14 @@ class Currency {
     required this.buy,
     required this.sell,
     required this.variation,
+    this.symbol,
   });
 
   String name;
-  double buy;
-  double sell;
-  double variation;
+  late String? symbol;
+  double? buy;
+  double? sell;
+  double? variation;
 
   static Currency fromJson(Map<String, dynamic> json) {
     return Currency(
